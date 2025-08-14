@@ -1,0 +1,275 @@
+/* =====================
+   Theme Colors & Fonts
+===================== */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #FFF8DC;
+    color: #2C2C2C;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.about-section {
+    padding-top: 60px; /* space between navbar and heading */
+    padding-bottom: 40px;
+
+}
+
+.about-section h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-section p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-section2 {
+  position: relative;
+  z-index: 1;
+  color: rgb(0, 0, 0); /* make text visible on GIF */
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.about-section2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/japanese.gif') center/cover no-repeat;
+  opacity: 0.2; /* adjust to make text readable */
+  z-index: -1;
+}
+
+/* Optional: add a semi-transparent overlay for better readability */
+.about-section2::after {
+  content: '';
+  position: absolute;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+.navbar {
+    background-color: #FFD700;
+    animation: slideDown 0.8s ease-in-out;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #2C2C2C !important;
+}
+.nav-link {
+    color: #2C2C2C !important;
+    transition: color 0.3s ease-in-out;
+}
+.nav-link:hover {
+    color: #E74C3C !important;
+}
+
+/* Buttons */
+.btn-danger {
+    background-color: #E74C3C;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-danger:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card Hover Effect */
+.card {
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+.menu-card {
+    background-color: #ffde73;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  .menu-card img {
+    width: 100%;
+    height: 200px; /* consistent height for all images */
+    object-fit: cover;
+    border-radius: 10px; /* match card's style */
+}
+
+  .fast-truck {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.fast-truck.animate {
+    animation: truckDrive 1s linear forwards;
+}
+
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffc107; /* optional yellow border to match your theme */
+}
+
+.title {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #ff7b7b;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background: #fff0f5;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(255, 155, 155, 0.3);
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel img {
+    width: 200px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+  
+  @keyframes truckDrive {
+    0% {
+      right: 100px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .rating i {
+    color: #ccc;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .rating i.filled {
+    color: gold;
+  }
+  
+  .about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.service-card {
+    background-color: #ffde73;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Different hover images for each card */
+  .service-card:nth-child(1)::before {
+    background-image: url('../images/dinein.jpeg');
+  }
+  
+  .service-card:nth-child(2)::before {
+    background-image: url('../images/delivery.jpeg');
+  }
+  
+  .service-card:nth-child(3)::before {
+    background-image: url('../images/catering.jpeg');
+  }
+  
+  .service-card:hover::before {
+    opacity: 0.6; /* adjust overlay opacity */
+  }
+  
+  /* Keep text and button above overlay */
+  .service-card * {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+
+
+/* Floating Image Animation */
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* =====================
+   Animations
+===================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
