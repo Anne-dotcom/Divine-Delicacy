@@ -10,7 +10,7 @@ document.querySelectorAll('.service-card').forEach(card => {
     }
 });
 
-// Optional: Pause carousel on hover
+
 const track = document.querySelector(".carousel-track");
 
 track.addEventListener("mouseenter", () => {
@@ -57,13 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const toastElement = document.getElementById("reserveToast");
   
     form.addEventListener("submit", function (e) {
-      e.preventDefault(); // stop actual form submission
+      e.preventDefault(); 
   
-      // Show Bootstrap toast
+    
       const toast = new bootstrap.Toast(toastElement);
       toast.show();
   
-      // Optional: Reset form after showing
+      
       form.reset();
     });
   });
